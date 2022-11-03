@@ -27,7 +27,7 @@
     - This is where Java starts running the code
 - Java class needs a `main()` method
 
-
+- `println` prints a message on a new line.
 ```java
 public class HelloJava {
 
