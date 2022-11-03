@@ -7,6 +7,8 @@ public class ReturnValues {
         double area2 = areaOfRectangle(2.6, 3.4);
         double area3 = areaOfRectangle(1.2, 15.4);
 
+        printArea(2.3, 3.6, area1);
+
         areaOfRectangle(-5, 2.3);
 
         String englishExplanation  = explainArea("English");
@@ -26,14 +28,16 @@ public class ReturnValues {
     }
 
     public static String explainArea(String language) {
-
         switch(language) {
             case "English": return "Area equal length * width";
             case "French": return "La surface est egale a la longueur * la largeur";
             case "Spanish": return "area es igual a largo * aancho";
             default: return "Language not available.";
         }
-        
+    }
+
+    public static void printArea(double length, double width, double area) {
+        System.out.println("A rectangle with a length of " + length + " and a width of " + width + " and an area of " + area);
     }
     
 }

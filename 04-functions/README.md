@@ -59,6 +59,10 @@ public static double areaOfRectangle(double length, double width) {
 }
 ```
 
+## Void Functions vs Value-retuning functions
+
+- use `void` when the function does not compute anything.
+
 ## Doc Comments
 
 - Tells what the function does.
