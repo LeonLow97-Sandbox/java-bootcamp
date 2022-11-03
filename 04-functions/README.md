@@ -75,4 +75,12 @@ public static double areaOfRectangle(double length, double width) {
 
 - Function that Java has made for you
 
+## DiceJack application
+
+- The user needs to pick 3 numbers.
+- The user needs to roll the dice 3 times.
+    - use `Math.random()` which returns 0 - 0.99999999999
+- The user wins if
+    - The sum of dice rolls is smaller than the sum of numbers the user chose
+    - AND the difference between the 2 numbers is less than 3.
 
