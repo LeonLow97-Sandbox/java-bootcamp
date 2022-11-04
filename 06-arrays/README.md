@@ -138,3 +138,7 @@ staffThisYear[1] = "Abby";
 ## Looping 2D array
 
 - use nested loop
+
+## Javapedia Project
+
+- [Javapedia](https://www.learnthepart.com/course/2dfda34d-6bbc-4bd5-8f45-d5999de2f514/1c1a1685-fbff-4b7e-b86d-0a07b95e1cd7)
