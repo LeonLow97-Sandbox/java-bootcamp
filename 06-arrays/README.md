@@ -89,3 +89,52 @@ for (int i = 0; i < menu.length; i++) {
     newMenu[i] = menu[i];
 }
 ```
+
+## Reference Trap
+
+- Could create another variable to store the same array (with the same array).
+- To avoid reference trap, do not set array variables equal to each other.
+  - to avoid having both arrays sharing the same reference.
+  - use the `for loop`
+  - or use `Arrays.copyOf()`
+- The state of a variable should not change because you updated another.
+
+```java
+// Solution: Copy to a brand new array
+String[] staffLastYear = {"Tommy", "Joel", "Ellie"};
+String[] staffThisYear = new String[3];
+for (int i = 0; i < staffThisYear.length; i++) {
+    staffThisYear[i] = staffLastYear[i];
+}
+staffThisYear[1] = "Abby";
+
+// Another solution
+String[] staffLastYear = {"Tommy", "Joel", "Ellie"};
+String[] staffThisYear = Arrays.copyOf(staffLastYear, staffLastYear.length);
+staffThisYear[1] = "Abby";
+```
+
+# 2D Arrays
+
+- An array that contains arrays.
+- Perfect for data in the form of a table.
+- Syntax:
+  - The type with 2 brackets.
+  - Number of rows.
+  - Number of elements per row
+  ```java
+      int[][] integers = new int[3][4];
+  ```
+- Another method to create 2D arrays
+
+```java
+    int[][]grades2 = {
+        {72, 74, 78, 76},
+        {65, 64, 61, 67},
+        {95, 98, 99, 100}
+    };
+```
+
+## Looping 2D array
+
+- use nested loop
