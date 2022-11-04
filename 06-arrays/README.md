@@ -30,6 +30,11 @@ public static void main(String[] args) {
     String[] kingdom = {"Mercia", "Wessex", "Northumbria", "E A"};
     System.out.println(kingdom);  // [Ljava.lang.String;@7ad041f3
 }
+
+// Use Arrays.toString instead
+import java.util.Arrays;
+
+System.out.println(Arrays.toString(kingdom));  // [Mercia, Wessex, Northumbria, E A]
 ```
 
 ## Access values from an array
@@ -58,5 +63,29 @@ String[] kingdoms = {"Mercia", "Wessex", "Northumbria", "E A"};
 System.out.println("The number of elements is " + kingdoms.length);
 for (int i = 0; i < kingdoms.length; i++) {
     System.out.println(i + " " + kingdoms[i]);
+}
+```
+
+## Updating Arrays values
+
+- Update an element from an index.
+
+```java
+String[] menu = {"Espresso", "Iced Coffee", "Macchiato"};
+menu[2] = "Latte";
+```
+
+## Creating an Array with Size n
+
+1. Make a new array
+2. That can store 5 `String` values
+
+```java
+String[] newMenu = new String[5];
+
+// Copying values from old array to new array
+for (int i = 0; i < menu.length; i++) {
+    // copies the values over to the new array
+    newMenu[i] = menu[i];
 }
 ```
