@@ -32,6 +32,7 @@ boolean bool1 = true;
 
 - Never use `==` or `!=` to compare String values (get weird results).
   - Use `equals` or `!equals` instead.
+- use `equalsIgnoreCase` to ignore case.
 
 # `if` statement
 
