@@ -14,6 +14,13 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
+    public Person (Person source) {
+        this.name = source.name;
+        this.nationality = source.nationality;
+        this.dateOfBirth = source.dateOfBirth;
+        this.seatNumber = source.seatNumber;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -46,5 +53,29 @@ public class Person {
         this.seatNumber = seatNumber;
     }
 
+    /**
+     *  Function name: applyPassport
+     *  @return (boolean)
+     *
+     *  Inside the function:
+     *     1. Returns a random boolean of true or false.
+     */
+    public boolean applyPassport() {
+        boolean[] isApplicable = {true, false};
+        double randomNum = 2 * Math.random();
+        int randomInt = (int)randomNum;
+        return isApplicable[randomInt];
+    }
 
+    /**
+     *  Function name: chooseSeat
+     *
+     *  Inside the function:
+     *    1. Sets this.seat to a random number between 1 -- 11.
+     */
+    public void chooseSeat() {
+        double randomNum = 1 + 10*Math.random();
+        int randomInt = (int)randomNum;
+        this.seatNumber = randomInt;
+    }
 }

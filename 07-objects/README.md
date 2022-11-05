@@ -19,9 +19,9 @@
 
 - blueprint from which you can create objects.
 - If a class has fields, it needs:
-    - Constructor
-    - Getters
-    - Setters
+  - Constructor
+  - Getters
+  - Setters
 
 ```java
 public class Car {
@@ -88,12 +88,13 @@ Car dodge = new Car("dodge", 11000, 2019, "blue");
 
 ## `public` vs `private`
 
- - methods and constructors are **public**.
- - Fields should be `private`, should not be able to access it outside the class.
-    - to prevent updating or changing the fields by mistake (dangerous).
-    - use a **getter** to access a field instead.
-    - should not have direct access to a field
+- methods and constructors are **public**.
+- Fields should be `private`, should not be able to access it outside the class.
+  - to prevent updating or changing the fields by mistake (dangerous).
+  - use a **getter** to access a field instead.
+  - should not have direct access to a field
 - `private` preserves the state of the object
+
 ```java
     private String make;
     private double price;
@@ -131,8 +132,8 @@ public void setMake(String make) {
 ## Reference Trap
 
 - The trap happens if you mishandle:
-    - Arrays
-    - Objects
+  - Arrays
+  - Objects
 - Many references to one object
 - To avoid this trap, do not set class variables equal to each other.
 - By setting class variables equal to each other, they are pointing to the same reference.
@@ -151,11 +152,11 @@ nissan2.setColor("yellow");
 ## Copy Constructor
 
 - Constructor overload
-    - having more than 1 constructor
+  - having more than 1 constructor
 - a class can take several constructors
-    - the constructors can also have the same name (java looks at the _number of arguments_ that were passed into the object).
+  - the constructors can also have the same name (java looks at the _number of arguments_ that were passed into the object).
 - making a copy constructor
-    - copies every value from one object to another
+  - copies every value from one object to another
 
 ```java
     public Car(Car source) {
@@ -168,7 +169,11 @@ nissan2.setColor("yellow");
 
 - better solution for Reference Trap (use copy constructor instead of making another object with the same values).
 
+## Actions
 
+- Add the `drive()` action to the class
+- an action is a method
+  - represents what the object can do.
 
 
 
