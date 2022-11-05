@@ -3,22 +3,22 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Car nissan = new Car();
+        Car nissan = new Car("Nissan", 5000, 2020, "red");
+        Car dodge = new Car("Dodge", 8500, 2019, "blue");
 
-        nissan.make = "Nissan";
-        nissan.price = 5000;
-        nissan.year = 2020;
-        nissan.color = "red";
+        nissan.setColor("Jet Black");
+        dodge.setColor("Jet Black");
 
-        Car dodge = new Car();
+        double newPrice = nissan.getPrice() / 2;
+        nissan.setPrice(newPrice);
 
-        dodge.make = "Dodge";
-        dodge.price = 11000;
-        dodge.year = 2019;
-        dodge.color = "blue";
+        double newPriceTwo = dodge.getPrice() / 2;
+        dodge.setPrice(newPriceTwo);
 
-        System.out.println("This " + nissan.make + " is worth $" + nissan.price + ". It was built in " + nissan.year + ". It is " + nissan.color + ".\n");
-        System.out.println("This " + dodge.make + " is worth $" + dodge.price + ". It was built in " + dodge.year + ". It is " + dodge.color + ".\n");
+        // System.out.println(nissan.getColor());
+
+        System.out.println("This " + nissan.getMake() + " is worth $" + nissan.getPrice() + ". It was built in " + nissan.getYear() + ". It is " + nissan.getColor() + ".\n");
+        System.out.println("This " + dodge.getMake() + " is worth $" + dodge.getPrice() + ". It was built in " + dodge.getYear() + ". It is " + dodge.getColor() + ".\n");
 
     }
     

@@ -4,19 +4,11 @@ public class Main {
   
     public static void main(String[] args) {
 
-        Person leon = new Person();
+        Person leon = new Person("Leon", "Singapore", "01/01/1111", 195);
         
-        leon.name = "Leon";
-        leon.nationality = "Singapore";
-        leon.dateOfBirth = "01/01/1111";
-        leon.passport = new String[]{leon.name, leon.nationality, leon.dateOfBirth};
-        leon.seatNumber = 195;
+        // leon.passport = new String[]{leon.name, leon.nationality, leon.dateOfBirth};
         
-        System.out.println(leon.name);
-        System.out.println(leon.nationality);
-        System.out.println(leon.dateOfBirth);
-        System.out.println(Arrays.toString(leon.passport));
-        System.out.println(leon.seatNumber);
+        System.out.println("Name: " + leon.name + "\n" + "Nationality: " + leon.nationality + "\n" + "Date of Birth: " + leon.dateOfBirth + "\n" + "Seat Number: " + leon.seatNumber + "\n");
       
     }
   

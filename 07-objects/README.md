@@ -34,6 +34,28 @@ public class Car {
 }
 ```
 
+## constructor
+
+- runs after you create an object.
+- update fields with a constructor.
+
+## Syntax of Constructor
+
+1. Level of access (usually `public`)
+2. The class name.
+3. Parameters.
+
+```java
+public Car (String make, double price, int year, String color) {
+
+}
+```
+
+## `this` keyword
+
+- `this` means current object.
+- `this` helps distinguish between fields and parameters.
+
 ## Objects
 
 - An object is a thing.
@@ -63,3 +85,47 @@ Car dodge = new Car("dodge", 11000, 2019, "blue");
         nissan.year = 2020;
         nissan.color = "red";
 ```
+
+## `public` vs `private`
+
+ - methods and constructors are **public**.
+ - Fields should be `private`, should not be able to access it outside the class.
+    - to prevent updating or changing the fields by mistake (dangerous).
+    - use a **getter** to access a field instead.
+    - should not have direct access to a field
+- `private` preserves the state of the object
+```java
+    private String make;
+    private double price;
+    private int year;
+    private String color;
+```
+
+## `getters`
+
+- Method (function) that returns a field's value.
+- `getter` is public and lowerCamelCase.
+- `getter` returns the field's value.
+- For `getters`, the keyword `this` is not required.
+
+```java
+public String getBrand() {
+    return this.brand;
+}
+```
+
+## `setters`
+
+- to update a private field.
+- method (function) that updates a field.
+- `getter` is public and lowerCamelCase.
+- `getter` receives a parameter
+- `getter` updates the field with a parameter.
+
+```java
+public void setMake(String make) {
+    this.make = make
+}
+```
+
+
