@@ -128,4 +128,47 @@ public void setMake(String make) {
 }
 ```
 
+## Reference Trap
+
+- The trap happens if you mishandle:
+    - Arrays
+    - Objects
+- Many references to one object
+- To avoid this trap, do not set class variables equal to each other.
+- By setting class variables equal to each other, they are pointing to the same reference.
+
+```java
+// Reference Trap
+Car nissan = new Car("Nissan", 5000, 2020, "red");
+Car nissan2 = nissan;
+
+nissan2.setColor("yellow");
+// both nissan and nissan2 color were updated to "yellow".
+```
+
+- Solution: Create a new object.
+
+## Copy Constructor
+
+- Constructor overload
+    - having more than 1 constructor
+- a class can take several constructors
+    - the constructors can also have the same name (java looks at the _number of arguments_ that were passed into the object).
+- making a copy constructor
+    - copies every value from one object to another
+
+```java
+    public Car(Car source) {
+        this.make = source.make;
+        this.price = source.price;
+        this.year = source.year;
+        this.color = source.color;
+    }
+```
+
+- better solution for Reference Trap (use copy constructor instead of making another object with the same values).
+
+
+
+
 
