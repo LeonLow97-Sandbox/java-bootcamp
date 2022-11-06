@@ -23,6 +23,12 @@
   - Getters
   - Setters
 
+|    Big 3    |               Description                |
+| :---------: | :--------------------------------------: |
+| Constructor | updates every field of a **new** object. |
+|   Getters   |           return field values            |
+|   Setters   |           update field values            |
+
 ```java
 public class Car {
 
@@ -174,6 +180,78 @@ nissan2.setColor("yellow");
 - Add the `drive()` action to the class
 - an action is a method
   - represents what the object can do.
+
+## Adding an array to the field in Class
+
+- have to make a copy of the array using `Arrays.copyOf()`
+- the example below is a **constructor**.
+
+```java
+    String[] parts;
+
+    public Car (String[] parts) {
+        // ...
+        this.parts = Arrays.copyOf(parts, parts.length)
+        // reference trap: ("parts" parameter and argument share the same reference, dangerous)
+        // this.parts = parts
+    }
+```
+
+- When many variables share the same reference (reference trap, see above example):
+  - Your application's behaviour becomes unpredictable.
+  - Variables start changing when you don't expect them to.
+  - Solution: create a new object or use Arrays.copyOf() to make a copy.
+
+## `getters` for arrays (private arrays not supposed to be updated)
+
+- By returning this `getter` of an array, it returns a reference pointed to this array (which is private).
+
+  - Thus, can update the array in the outside variable.
+  - `getter` is supposed to project your variable but it isn't in this case below.
+
+- Below is the `Car.java` which contains the Class.
+
+```java
+    public String[] getParts() {
+        return this.parts;
+    }
+```
+
+- In `Main.java`
+
+```java
+    public static void main(String[] args) {
+
+        String[] parts = {"tires", "keys"};
+        Car nissan = new Car("Nissan", 5000, 2020, "red", parts);
+
+        String[] outsideVariable = nissan.getParts();
+        outsideVariable[1] = "hello";  // not supposed to be able to update
+
+        // the output is wrong because we are not supposed to be able
+        // to update the private value in the array.
+        System.out.println(Arrays.toString(nissan.getParts()));  // [tires, hello]
+
+    }
+```
+
+- Solution in `Car.java` Class
+    - use `Arrays.copyOf`
+
+```java
+    public String[] getParts() {
+        return Arrays.copyOf(this.parts, this.parts.length);
+    }
+```
+
+
+
+
+
+
+
+
+
 
 
 
