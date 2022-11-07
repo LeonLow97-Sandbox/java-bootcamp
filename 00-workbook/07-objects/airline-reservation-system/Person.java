@@ -21,6 +21,7 @@ public class Person {
         this.nationality = source.nationality;
         this.dateOfBirth = source.dateOfBirth;
         this.seatNumber = source.seatNumber;
+        this.passport = Arrays.copyOf(source.passport, source.passport.length);
     }
 
     public String getName() {
@@ -39,6 +40,10 @@ public class Person {
         return this.seatNumber;
     }
 
+    public String[] getPassport() {
+        return Arrays.copyOf(this.passport, this.passport.length);
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -53,6 +58,10 @@ public class Person {
 
     public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
+    }
+
+    public void setPassport() {
+        this.passport = new String[] {this.name, this.nationality, this.dateOfBirth};
     }
 
     /**
@@ -79,5 +88,14 @@ public class Person {
         double randomNum = 1 + 10*Math.random();
         int randomInt = (int)randomNum;
         this.seatNumber = randomInt;
+    }
+
+    public String toString() {
+        return 
+            "Name: " + this.name + "\n" + "Nationality: " + 
+            this.nationality + "\n" + "Date of Birth: " + 
+            this.dateOfBirth + "\n" + "Seat Number: " +
+            this.seatNumber + "\n" + "Passport: " + 
+            Arrays.toString(this.passport) + "\n";
     }
 }

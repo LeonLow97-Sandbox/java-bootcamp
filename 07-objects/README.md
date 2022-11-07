@@ -244,6 +244,58 @@ nissan2.setColor("yellow");
     }
 ```
 
+## `toString`
+
+- connects every field into a **String**.
+- Why is **toString** special?
+  - **toString** runs when you print an object.
+
+```java
+// It is public
+// Has the name: toString
+// Returns a String
+public String toString() {
+  return /* every field as part of a String */
+}
+```
+
+## Manager Class
+
+- A class that manages objects of another class.
+- In this example, the manager class is the `Dealership` class.
+
+## `constructor` in Manager Class
+
+```java
+public class Dealership {
+
+    private Car[] cars;
+
+    public Dealership() {
+        this.cars = new Car[3];
+    }
+ 
+}
+```
+
+## `setter` in Manager Class
+
+```java
+// the setter only updates 1 object
+// the setter lets the user choose which one.
+public void setCar(Car car, int index)
+```
+
+## `getter` in Manager Class
+
+```java
+// return one object
+// at an index of your choice
+public Car getCar(int index) {
+  
+}
+```
+
 
 
 

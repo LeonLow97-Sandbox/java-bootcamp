@@ -139,7 +139,7 @@ staffThisYear[1] = "Abby";
 
 - use nested loop
 
-## Arrays
+## ***Arrays***
 
 - return an array on the fly using: `return new Type[] {element1, element2};`
 
