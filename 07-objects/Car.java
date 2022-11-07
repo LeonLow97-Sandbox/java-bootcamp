@@ -71,8 +71,7 @@ public class Car {
     }
 
     public String toString() {
-        return "\n----- From toString() method -----\n"
-            + "Make: " + this.make + ".\n"
+        return "Make: " + this.make + ".\n"
             + "Price: " + this.price + ".\n"
             + "Year: " + this.year + ".\n"
             + "Color: " + this.color + ".\n"
