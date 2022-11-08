@@ -12,6 +12,7 @@
   - `NetworkException`: failure to connect to a website.
   - `FileNotFoundException`: failure to access a missing file.
   - `SQLException`: failure to access or query from a database.
+  - `MalformedURLException`
 
 ```java
 /// Catching the Exception
