@@ -29,7 +29,13 @@ variable = (comparison) ? (value1) : (value2)
 
 ## Debugging Nested Loops
 
-- 
+## Debugging 2D Arrays
+
+- A variable:
+    - Does not store an array.
+    - Stores a reference that points to an array.
+- 2D arrays require nested loops.
+- Hard to keep track of the counters *i* and *j*.
 
 
 
