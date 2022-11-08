@@ -1,0 +1,294 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArraysAndLoops",
+            "request": "launch",
+            "mainClass": "ArraysAndLoops",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch BooleanComparisons",
+            "request": "launch",
+            "mainClass": "BooleanComparisons",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Booleans",
+            "request": "launch",
+            "mainClass": "Booleans",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch BreakAndContinue",
+            "request": "launch",
+            "mainClass": "BreakAndContinue",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Breakpoints",
+            "request": "launch",
+            "mainClass": "Breakpoints",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch BuiltInFunctions",
+            "request": "launch",
+            "mainClass": "BuiltInFunctions",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bus",
+            "request": "launch",
+            "mainClass": "Bus",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chorus",
+            "request": "launch",
+            "mainClass": "Chorus",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dealership",
+            "request": "launch",
+            "mainClass": "Dealership",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Decimals",
+            "request": "launch",
+            "mainClass": "Decimals",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Delimiters",
+            "request": "launch",
+            "mainClass": "Delimiters",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch DiceJack",
+            "request": "launch",
+            "mainClass": "DiceJack",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch DocComments",
+            "request": "launch",
+            "mainClass": "DocComments",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch FirstProgram",
+            "request": "launch",
+            "mainClass": "FirstProgram",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch ForLoop",
+            "request": "launch",
+            "mainClass": "ForLoop",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Form",
+            "request": "launch",
+            "mainClass": "Form",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hangman",
+            "request": "launch",
+            "mainClass": "Hangman",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloJava",
+            "request": "launch",
+            "mainClass": "HelloJava",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch IfElse",
+            "request": "launch",
+            "mainClass": "IfElse",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch IntroToArrays",
+            "request": "launch",
+            "mainClass": "IntroToArrays",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Javapedia",
+            "request": "launch",
+            "mainClass": "Javapedia",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch JoiningStrings",
+            "request": "launch",
+            "mainClass": "JoiningStrings",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch LogicalOperators",
+            "request": "launch",
+            "mainClass": "LogicalOperators",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch MathOperations",
+            "request": "launch",
+            "mainClass": "MathOperations",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch NestedLoops",
+            "request": "launch",
+            "mainClass": "NestedLoops",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Parameters",
+            "request": "launch",
+            "mainClass": "Parameters",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pokerito",
+            "request": "launch",
+            "mainClass": "Pokerito",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReferenceTrap",
+            "request": "launch",
+            "mainClass": "ReferenceTrap",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReturnValues",
+            "request": "launch",
+            "mainClass": "ReturnValues",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Scope",
+            "request": "launch",
+            "mainClass": "Scope",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Survey",
+            "request": "launch",
+            "mainClass": "Survey",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwitchStatements",
+            "request": "launch",
+            "mainClass": "SwitchStatements",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TDarrays",
+            "request": "launch",
+            "mainClass": "TDarrays",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TypeConversion",
+            "request": "launch",
+            "mainClass": "TypeConversion",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpdatingArrays",
+            "request": "launch",
+            "mainClass": "UpdatingArrays",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Variables",
+            "request": "launch",
+            "mainClass": "Variables",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch WhileLoop",
+            "request": "launch",
+            "mainClass": "WhileLoop",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch WholeNumbers",
+            "request": "launch",
+            "mainClass": "WholeNumbers",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        },
+        {
+            "type": "java",
+            "name": "Launch YourInitials",
+            "request": "launch",
+            "mainClass": "YourInitials",
+            "projectName": "java-complete-development-bootcamp_a985723b"
+        }
+    ]
+}
