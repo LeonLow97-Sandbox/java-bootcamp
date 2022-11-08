@@ -1,6 +1,16 @@
+import java.util.Scanner;
+
 public class Main {
+
+    public static Scanner scan = new Scanner(System.in);
   
     public static void main(String[] args) {
+
+        System.out.println("\n ****** JAVA DEALERSHIP! ****** \n");
+        System.out.print("Welcome! Enter the type of car you're looking for: ");
+        String make = scan.nextLine();
+        System.out.print("Enter your budget: ");
+        int budget = scan.nextInt();
  
         Person[] people = new Person[] {
             new Person("Cleopatra", "Egypt", "69 BC", 1),

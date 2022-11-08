@@ -1,5 +1,7 @@
 # Objects
 
+- [Objects Cheatsheet](https://www.learnthepart.com/course/2dfda34d-6bbc-4bd5-8f45-d5999de2f514/d0578407-f92c-4879-b32c-78cea1e25073)
+
 ## Objectives
 
 - Plan code around objects
@@ -198,7 +200,7 @@ nissan2.setColor("yellow");
 ```
 
 - When many variables share the same reference (reference trap, see above example):
-  - Your application's behaviour becomes unpredictable.
+  - Your application's behavior becomes unpredictable.
   - Variables start changing when you don't expect them to.
   - Solution: create a new object or use Arrays.copyOf() to make a copy.
 
@@ -301,7 +303,8 @@ public Car getCar(int index) {
 - Don't use it on an array objects.
 - `Arrays.copyOf` shallow copies the reference in each element.
 - For example, `array2 = Arrays.copyOf(array)`,
-  - This is the same as 
+  - That is the same as the following:
+  - This is because `Arrays.copyOf` behaves like a loop that sets each element in the cars field directly equal to each element in the cars parameter.
   ```java
     for (...) {
       array2[i] = array[i]
@@ -358,6 +361,51 @@ public Car getCar(int index) {
 |:-:|:-:|
 |Pitfall|The outside variable and field share a reference to the same object.|
 |Solution|Return a `new` copy of the object.|
+
+## Primitive vs Class Types
+
+- A variable of the primitive type stores a value directly.
+- Primitives:
+  - represent a value
+  - cannot be null
+  - have no methods.
+- Classes: 
+  - can create objects from
+  - store a reference that points to an object
+  - can be null
+  - can call methods from its class.
+
+|Primitive|Class|
+|:-:|:-:|
+|`int, double, long, boolean, char`|`object, String`|
+
+## `String` Class
+- `String` is a Class (it is in capital)
+- `String` is not vulnerable to reference trap (immutable class type).
+- `String` variables can be null
+
+|String Methods|Description|
+|:-:|:-:|
+|`toCharArray()`|Converts this string to a new character array.|
+|`toLowerCase()`|Converts all of the characters in this String to lower case.|
+|`toLowerCase(Locale locale)`|Converts all of the characters in this String to lower case.|
+|`toString()`|This object (which is already a string) is itself returned.|
+|`toUpperCase()`|Converts all of the characters in this String to uppercase.|
+
+## `Scanner` Class
+
+- `Scanner` is also a Class type.
+- `nextLine()`, `nextInt()`, `nextLong()`...
+
+## `null` value
+
+- primitive variables cannot be *null*.
+  - have a fixed memory size.
+- class variables (objects) can be *null*.
+  - class types don't have a fixed memory size:
+    - Object with 20 fields vs 1 field
+    - Array of 50 elements vs 1 element.
+- `null` applies when memory size is not fixed
 
 
 
