@@ -4,8 +4,11 @@ public class Dealership {
 
     private Car[] cars;
 
-    public Dealership() {
-        this.cars = new Car[3];
+    public Dealership(Car[] cars) {
+        this.cars = new Car[cars.length];
+        for (int i = 0; i < this.cars.length; i++) {
+            this.cars[i] = new Car(cars[i]);
+        }
     }
 
     // passing in the source object from Car.java (avoid reference trap)
@@ -44,7 +47,7 @@ public class Dealership {
         for (int i = 0; i < this.cars.length; i++) {
             temp += "Parking Spot: " + i + "\n";
             if (this.cars[i] == null) {
-                temp += "This parking spot is Empty!";
+                temp += "Empty!\n";
             } else {
                 temp += this.cars[i].toString() + "\n";
             }

@@ -296,6 +296,69 @@ public Car getCar(int index) {
 }
 ```
 
+## Reference Trap Example (Why not use `Arrays.copyOf()`?)
+
+- Don't use it on an array objects.
+- `Arrays.copyOf` shallow copies the reference in each element.
+- For example, `array2 = Arrays.copyOf(array)`,
+  - This is the same as 
+  ```java
+    for (...) {
+      array2[i] = array[i]
+    }
+  ```
+  - Solution: Use a loop to deep copy the object in each element.
+  ```java
+    for (...) {
+      array2[i] = new Object(array[i])
+    }
+  ```
+
+```java
+  // Main.java
+  Car[] cars = new Car[] {
+    new Car("Nissan", 5000, 2020, "red", new String[] {"tires", "keys"}),
+    new Car("Dodge", 8500, 2019, "blue", new String[] {"tires", "keys"}),
+    new Car("Nissan", 5000, 2017, "yellow", new String[]{"tires", "filter"}),
+    new Car("Honda", 7000, 2019, "orange", new String[]{"tires", "filter"}),
+    new Car("Mercedes", 12000, 2015, "jet black", new String[]{"tires", "filter", "transmission"})
+};
+```
+
+```java
+  // Dealership.java
+  public Dealership(Car[] cars) {
+      this.cars = new Car[cars.length];
+      for (int i = 0; i < this.cars.length; i++) {
+          this.cars[i] = new Car(cars[i]);
+      }
+  }
+```
+
+# Reference Trap
+
+- The state of a variable should not change because you updated another.
+
+|Trap|Setting an array variable equal to another.|
+|:-:|:-:|
+|Pitfall|Both variables share a reference to the same array.|
+|Solution|Set it equal to a copy of the array (`Arrays.copyOf`).|
+
+|Trap|Setting an object variable equal to another.|
+|:-:|:-:|
+|Pitfall|Both variables share a reference to the same object.|
+|Solution|Create a `new` copy of the object (copy constructor).|
+
+|Trap|Getter returns an array field directly.|
+|:-:|:-:|
+|Pitfall|The outside variable and field share a reference to the same array.|
+|Solution|Return a copy of the array (`Arrays.copyOf`).|
+
+|Trap|Getter returns an object directly.|
+|:-:|:-:|
+|Pitfall|The outside variable and field share a reference to the same object.|
+|Solution|Return a `new` copy of the object.|
+
 
 
 
