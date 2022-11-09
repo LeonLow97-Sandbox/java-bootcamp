@@ -18,9 +18,12 @@ public class Dealership {
         return new Car(this.cars[index]);
     }
 
+    public int getLength() {
+        return this.cars.length;
+    }
     
     public void sell(int index) {
-        if (isEmpty()) {
+        if (this.isEmpty()) {
             throw new IllegalStateException("There are no cars for sale.");
         }
         this.cars[index].drive();
