@@ -1,3 +1,14 @@
+# Importing Packages
+
+```java
+// importing individual files 
+import models.Car;
+import models.Dealership;
+
+// importing all files in that folder
+import models.*;
+```
+
 # Exception Handling
 
 - Exception is a failure that can crash the application.
