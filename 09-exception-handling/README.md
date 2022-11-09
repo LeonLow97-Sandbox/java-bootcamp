@@ -30,3 +30,25 @@ public void loadFile() throws FileNotFoundException {
     ...
 }
 ```
+
+# Unchecked Exceptions
+
+- Badly written code.
+- Never catch an unchecked exception.
+- Fix unchecked exceptions.
+- Runtime exceptions (happens will the app is running, will crash the application)
+- E.g., `ArrayIndexOutOfBoundsException`, `NullPointerException`, `IllegalArgumentException`, `InputMismatchException`, `IllegalStateException`
+- Never replace if-else with try-catch.
+- Only use try-catch for checked exceptions.
+
+## Throwing Unchecked Exceptions
+
+- Maintain quality control
+
+
+
+
+
+
+
+
