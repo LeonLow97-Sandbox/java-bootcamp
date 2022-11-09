@@ -44,7 +44,24 @@ public void loadFile() throws FileNotFoundException {
 ## Throwing Unchecked Exceptions
 
 - Maintain quality control
-
+- Forbid the caller from misusing methods/cons.
+- Most common exceptions to throw
+  - `IllegalArgumentException`
+  - Method/constructor receives illegal values.
+  ```java
+      if (name == null || name.isBlank() || position == null || position.isBlank()) {
+          throw new IllegalArgumentException("Name or position cannot be null or blank.");
+      }
+  ```
+  - `IllegalStateException`
+    - Object calls a method with an Illegal State.
+    ```java
+      for (int i = 0; i < employees.length; i++) {
+          if (employees[i] == null) {
+              throw new IllegalStateException("You must be fully staffed before opening the store");
+          }
+      }
+    ```
 
 
 
