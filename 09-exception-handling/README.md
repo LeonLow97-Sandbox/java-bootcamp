@@ -1,7 +1,7 @@
 # Importing Packages
 
 ```java
-// importing individual files 
+// importing individual files
 import models.Car;
 import models.Dealership;
 
@@ -74,10 +74,32 @@ public void loadFile() throws FileNotFoundException {
       }
     ```
 
+# Mutable / Immutable Objects
 
+## Mutator
 
+- Another name for "setter".
 
+## Mutable Object
 
+- Object that can update its fields.
+- It uses **mutators** (setters) to update fields.
+- Vulnerable to reference trap
+- Every *array* is a mutable object.
+  - mutable object of `type[]` class.
 
+## Immutable Object
+
+- Object that **cannot** update its fields.
+- It does not have **mutators** (setters).
+- Not vulnerable to reference trap.
+
+|                  | Primitive Type | Mutable Object | Immutable Object |
+| :--------------: | :------------: | :------------: | :--------------: |
+|      Stores      |     Value      |   Reference    |    Reference     |
+|     Nullable     |       No       |      Yes       |       Yes        |
+| Callable Methods |       No       |      Yes       |       Yes        |
+| Can Update State |      N/A       |      Yes       |        No        |
+|  Reference Trap  |      N/A       |   Vulnerable   |      Immune      |
 
 
