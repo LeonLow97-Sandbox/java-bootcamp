@@ -107,7 +107,7 @@ public void loadFile() throws FileNotFoundException {
 - Java is Object Oriented
 - There is a Class for every primitive type.
 - `new Wrapper(value)` is deprecated.
-- **Wrapper**: Immutable class that wraps around a primitive type.
+- **Wrapper**: _Immutable_ class that wraps around a primitive type.
   - E.g., `Integer` is a immutable class that wraps around `int`.
   ```java
     // new Integer(value) is deprecated.
@@ -126,6 +126,9 @@ public void loadFile() throws FileNotFoundException {
 |    Character    |      char      |
 |     String      |      N/A       |
 
+- Is String a Wrapper Class? 
+  - No. Although `String` is immutable, it does not wrap around a primitive.
+
 ## When to use Primitive vs Wrapper?
 
 - Use Primitive 90% of the time.
@@ -133,6 +136,39 @@ public void loadFile() throws FileNotFoundException {
   - Use a Wrapper only when you need to. Examples:
     - Needs to be `null`
     - Needs to call methods.
+
+# ArrayList
+
+## Array vs ArrayList
+
+- Array: fixed in size
+  - cannot change the number of elements. (less overhead)
+- ArrayList: resizable (size can vary)
+  - can add/remove elements
+  - can only store objects. It cannot store primitives.
+
+## ArrayList syntax
+
+1. Write the type: `ArrayList`
+2. Generics <> specify what it can store.
+  - Generics <> can only accept class types.
+  - Generics <> cannot accept primitives.
+3. Create a new object of the `ArrayList` class.
+
+```java
+ArrayList<class_type> collection = new ArrayList<class_type>();
+
+// this is correct
+ArrayList<String> names = new ArrayList<String>();
+
+// this is not correct (ArrayList can only store objects)
+ArrayList<int> numbers = new ArrayList<int>();
+// this is correct
+ArrayList<Integer> numbers = new ArrayList<Integer>();
+```
+
+- Methods in ArrayList Class
+  - `get`, `set`, `add`, `remove`, `size`, `clear`
 
 
 
