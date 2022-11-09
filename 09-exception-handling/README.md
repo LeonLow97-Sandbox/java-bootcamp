@@ -85,7 +85,7 @@ public void loadFile() throws FileNotFoundException {
 - Object that can update its fields.
 - It uses **mutators** (setters) to update fields.
 - Vulnerable to reference trap
-- Every *array* is a mutable object.
+- Every _array_ is a mutable object.
   - mutable object of `type[]` class.
 
 ## Immutable Object
@@ -101,5 +101,39 @@ public void loadFile() throws FileNotFoundException {
 | Callable Methods |       No       |      Yes       |       Yes        |
 | Can Update State |      N/A       |      Yes       |        No        |
 |  Reference Trap  |      N/A       |   Vulnerable   |      Immune      |
+
+# Wrapper Class
+
+- Java is Object Oriented
+- There is a Class for every primitive type.
+- `new Wrapper(value)` is deprecated.
+- **Wrapper**: Immutable class that wraps around a primitive type.
+  - E.g., `Integer` is a immutable class that wraps around `int`.
+  ```java
+    // new Integer(value) is deprecated.
+    Integer number = new Integer(5);
+
+    // new way
+    Integer number = 5;
+  ```
+- Wrapper Objects are immutable (not vulnerable to reference trap);
+
+| Immutable Class | Primitive Type |
+| :-------------: | :------------: |
+|     Integer     |      int       |
+|      Long       |      long      |
+|     Double      |     double     |
+|    Character    |      char      |
+|     String      |      N/A       |
+
+## When to use Primitive vs Wrapper?
+
+- Use Primitive 90% of the time.
+  - Primitive types are faster than wrapper classes.
+  - Use a Wrapper only when you need to. Examples:
+    - Needs to be `null`
+    - Needs to call methods.
+
+
 
 
