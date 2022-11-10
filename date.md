@@ -17,6 +17,16 @@
     formatter.setLenient(false);
 ```
 
+```java
+    public int toAge(String birthDate) throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        formatter.setLenient(false);
+        long diff = new Date().getTime() - formatter.parse(birthDate).getTime(); // age in milliseconds
+        long days = TimeUnit.MILLISECONDS.toDays(diff);
+        return (int) (days/365);
+    }
+```
+
 
 
 

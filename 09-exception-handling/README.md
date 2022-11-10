@@ -68,6 +68,7 @@ public void loadFile() throws FileNotFoundException {
 - Most common exceptions to throw
   - `IllegalArgumentException`
   - Method/constructor receives illegal values.
+- If the constructor does not receive any parameters, there is nothing to check. 
   ```java
       if (name == null || name.isBlank() || position == null || position.isBlank()) {
           throw new IllegalArgumentException("Name or position cannot be null or blank.");
@@ -183,6 +184,30 @@ ArrayList<Contact> contacts;
 
 - Methods in ArrayList Class
   - `get`, `set`, `add`, `remove`, `size`, `clear`
+
+## Loading a file
+
+```java
+public class ReadingFiles {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("Greetings.txt");
+            Scanner scan = new Scanner(fis);
+            while (scan.hasNextLine()) {
+                System.out.println(scan.nextLine());
+            }
+            scan.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+
+
+
+
+
 
 
 

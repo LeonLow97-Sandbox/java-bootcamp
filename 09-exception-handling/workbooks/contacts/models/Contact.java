@@ -12,7 +12,7 @@ public class Contact {
     private String phoneNumber;
     private int age;
 
-    public Contact(String name, String birthDate, String phoneNumber) throws ParseException {
+    public Contact(String name, String phoneNumber, String birthDate) throws ParseException {
         // IllegalArgumentException is not needed for birthDate because it already throw a ParseException error.
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("name cannot be null or blank.");

@@ -284,3 +284,7 @@ Scanner scan = new Scanner(System.in); // input from the system
 
 - Close scanner once you are done.
 - Leaving scanner open is memory leak.
+
+## `scan.next()`
+
+- scan.next to grab the next String separated by white space
