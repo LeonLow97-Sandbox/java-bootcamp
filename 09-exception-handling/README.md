@@ -9,6 +9,11 @@ import models.Dealership;
 import models.*;
 ```
 
+```java
+// Setting up packages
+package models
+```
+
 # Exception Handling
 
 - Exception is a failure that can crash the application.
@@ -41,6 +46,10 @@ public void loadFile() throws FileNotFoundException {
     ...
 }
 ```
+
+## `finally` in `try-catch` block
+
+- `finally` keyword is used to execute code (used with exceptions - try..catch statements) no matter if there is an exception or not.
 
 # Unchecked Exceptions
 
@@ -165,6 +174,11 @@ ArrayList<String> names = new ArrayList<String>();
 ArrayList<int> numbers = new ArrayList<int>();
 // this is correct
 ArrayList<Integer> numbers = new ArrayList<Integer>();
+```
+
+```java
+// Initialize ArrayList in Class
+ArrayList<Contact> contacts;
 ```
 
 - Methods in ArrayList Class

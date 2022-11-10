@@ -1,8 +1,27 @@
+import java.text.ParseException;
+import java.util.ArrayList;
+
+import models.Contact;
+import models.ContactManager;
+
 public class Main {
     public static void main(String[] args) {
         
-      
-        
+        try {
+            // Contact contact = new Contact("Leon", "07/23/1912", "98765432");
+            // System.out.println(contact.toString());
+            ContactManager manager = new ContactManager();
+            manager.addContact(new Contact("Leon", "07/23/1912", "9438502435"));
+            manager.addContact(new Contact("Daniel", "08/23/1943", "328942394"));
+            manager.addContact(new Contact("Ron", "09/12/2003", "93028409234"));
+            manager.removeContact("Ron");
+            System.out.println(manager);
+        } catch (ParseException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Process Complete");
+        }
+
     }
 
     /**
