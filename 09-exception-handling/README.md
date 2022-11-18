@@ -9,6 +9,11 @@ import models.Dealership;
 import models.*;
 ```
 
+```java
+// Setting up packages
+package models
+```
+
 # Exception Handling
 
 - Exception is a failure that can crash the application.
@@ -42,6 +47,10 @@ public void loadFile() throws FileNotFoundException {
 }
 ```
 
+## `finally` in `try-catch` block
+
+- `finally` keyword is used to execute code (used with exceptions - try..catch statements) no matter if there is an exception or not.
+
 # Unchecked Exceptions
 
 - Badly written code.
@@ -59,6 +68,7 @@ public void loadFile() throws FileNotFoundException {
 - Most common exceptions to throw
   - `IllegalArgumentException`
   - Method/constructor receives illegal values.
+- If the constructor does not receive any parameters, there is nothing to check. 
   ```java
       if (name == null || name.isBlank() || position == null || position.isBlank()) {
           throw new IllegalArgumentException("Name or position cannot be null or blank.");
@@ -167,8 +177,37 @@ ArrayList<int> numbers = new ArrayList<int>();
 ArrayList<Integer> numbers = new ArrayList<Integer>();
 ```
 
+```java
+// Initialize ArrayList in Class
+ArrayList<Contact> contacts;
+```
+
 - Methods in ArrayList Class
   - `get`, `set`, `add`, `remove`, `size`, `clear`
+
+## Loading a file
+
+```java
+public class ReadingFiles {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("Greetings.txt");
+            Scanner scan = new Scanner(fis);
+            while (scan.hasNextLine()) {
+                System.out.println(scan.nextLine());
+            }
+            scan.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+
+
+
+
+
 
 
 
