@@ -68,7 +68,7 @@ public void loadFile() throws FileNotFoundException {
 - Most common exceptions to throw
   - `IllegalArgumentException`
   - Method/constructor receives illegal values.
-- If the constructor does not receive any parameters, there is nothing to check. 
+- If the constructor does not receive any parameters, there is nothing to check.
   ```java
       if (name == null || name.isBlank() || position == null || position.isBlank()) {
           throw new IllegalArgumentException("Name or position cannot be null or blank.");
@@ -83,6 +83,26 @@ public void loadFile() throws FileNotFoundException {
           }
       }
     ```
+
+## Expecting a Function to throw an error
+
+```java
+public class ParseURLTwo {
+    public static void main(String[] args) {
+        try {
+            parseURL("https://www.google.com/images");
+        } catch (MalformedURLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public static void parseURL(String link) throws MalformedURLException {
+            URL url = new URL(link);
+            System.out.println(url.getProtocol());
+            System.out.println(url.getHost());
+            System.out.println(url.getPath());
+    }
+}
+```
 
 # Mutable / Immutable Objects
 
@@ -118,7 +138,9 @@ public void loadFile() throws FileNotFoundException {
 - There is a Class for every primitive type.
 - `new Wrapper(value)` is deprecated.
 - **Wrapper**: _Immutable_ class that wraps around a primitive type.
+
   - E.g., `Integer` is a immutable class that wraps around `int`.
+
   ```java
     // new Integer(value) is deprecated.
     Integer number = new Integer(5);
@@ -126,6 +148,7 @@ public void loadFile() throws FileNotFoundException {
     // new way
     Integer number = 5;
   ```
+
 - Wrapper Objects are immutable (not vulnerable to reference trap);
 
 | Immutable Class | Primitive Type |
@@ -136,7 +159,7 @@ public void loadFile() throws FileNotFoundException {
 |    Character    |      char      |
 |     String      |      N/A       |
 
-- Is String a Wrapper Class? 
+- Is String a Wrapper Class?
   - No. Although `String` is immutable, it does not wrap around a primitive.
 
 ## When to use Primitive vs Wrapper?
@@ -161,8 +184,10 @@ public void loadFile() throws FileNotFoundException {
 
 1. Write the type: `ArrayList`
 2. Generics <> specify what it can store.
-  - Generics <> can only accept class types.
-  - Generics <> cannot accept primitives.
+
+- Generics <> can only accept class types.
+- Generics <> cannot accept primitives.
+
 3. Create a new object of the `ArrayList` class.
 
 ```java
@@ -203,12 +228,3 @@ public class ReadingFiles {
     }
 }
 ```
-
-
-
-
-
-
-
-
-

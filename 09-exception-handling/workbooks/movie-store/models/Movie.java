@@ -10,6 +10,15 @@ public class Movie {
     private boolean isAvailable;
 
     public Movie(String name, String format, double rating) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("name cannot be null or blank");
+        }
+        if (!format.equalsIgnoreCase("DVD") || !format.equalsIgnoreCase("Blue-Ray")) {
+            throw new IllegalArgumentException("Format must be DVD or Blue-Ray");
+        }
+        if (rating < 10 || rating > 10) {
+            throw new IllegalArgumentException("rating must be greater than or equal to 0 OR less than or equal to 10.");
+        }
         this.name = name;
         this.format = format;
         this.rating = rating; 
@@ -52,14 +61,26 @@ public class Movie {
     }
 
     public void setName(String name) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("name cannot be null or blank");
+        }
         this.name = name;
     }
 
     public void setFormat(String format) {
+        if (format == null || format.isBlank()) {
+            throw new IllegalArgumentException("format cannot be null or blank");
+        }
+        if (!format.equalsIgnoreCase("DVD") || !format.equalsIgnoreCase("Blue-Ray")) {
+            throw new IllegalArgumentException("Format must be DVD or Blue-Ray");
+        }
         this.format = format;
     }
 
     public void setRating(double rating) {
+        if (rating < 10 || rating > 10) {
+            throw new IllegalArgumentException("rating must be greater than or equal to 0 OR less than or equal to 10.");
+        }
         this.rating = rating;
     }
 
