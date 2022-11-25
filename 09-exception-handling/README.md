@@ -207,7 +207,7 @@ ArrayList<Integer> numbers = new ArrayList<Integer>();
 ArrayList<Contact> contacts;
 ```
 
-- Methods in ArrayList Class
+- **Methods in ArrayList Class**
   - `get`, `set`, `add`, `remove`, `size`, `clear`
 
 ## Loading a file
