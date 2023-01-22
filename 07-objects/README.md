@@ -17,3 +17,7 @@
 
 - refers to the **current** object.
 - to distinguish between fields and parameters.
+
+# getters
+
+- Use getters to access object fields.
