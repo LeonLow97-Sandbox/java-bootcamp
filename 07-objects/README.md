@@ -21,3 +21,9 @@
 # getters
 
 - Use getters to access object fields.
+
+# Java Code Generator VS Code Package
+
+- Install _Java Code Generator_
+- To generate getters and setters
+- Right click in class -> Java Code Generators -> Generate Getters and Setters
