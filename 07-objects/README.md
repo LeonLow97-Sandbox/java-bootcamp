@@ -36,7 +36,18 @@
 - Avoid setting variables equal to each other.
 - Both variables will share a reference to the same object.
 
-# Create a copy constructor
+### Create a copy constructor
 
 - When you want to make a copy of an object.
 - So 2 objects don't share the same reference.
+
+### Arrays are mutable objects
+
+- can update elements even after it is being created.
+
+```java
+private String[] parts
+
+// this.parts = parts; // mutable object
+this.parts = Arrays.copyOf(parts, parts.length);
+```
