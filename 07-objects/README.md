@@ -27,3 +27,16 @@
 - Install _Java Code Generator_
 - To generate getters and setters
 - Right click in class -> Java Code Generators -> Generate Getters and Setters
+
+# Copy constructor to class
+
+## Mutable Object
+
+- Object with setters.
+- Avoid setting variables equal to each other.
+- Both variables will share a reference to the same object.
+
+# Create a copy constructor
+
+- When you want to make a copy of an object.
+- So 2 objects don't share the same reference.

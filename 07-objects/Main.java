@@ -3,11 +3,14 @@ public class Main {
         Car nissan = new Car("Nissan", 10000, 2020, "Green");
         Car dodge = new Car("Dodge", 11000, 2019, "Blue");
 
-        nissan.setColor("Jet Black");
-        dodge.setColor("Jet Black");
+        Car nissan2 = new Car(nissan);
 
-        nissan.setPrice(nissan.getPrice() / 2);
-        dodge.setPrice(dodge.getPrice() / 2);
+        nissan2.setColor("Yellow");
+        nissan.setColor("Orange");
+        nissan2.setColor("Blue");
+        nissan.setColor("Purple");
+        nissan2.setColor("Fuchsia");
+        nissan.setColor("Beige");
 
         System.out.println("This " + nissan.getMake() + " is worth $" + nissan.getPrice() + 
         ". It was built in " + nissan.getYear() + ". It is " + nissan.getColor() + ".\n");
