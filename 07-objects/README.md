@@ -51,3 +51,10 @@ private String[] parts
 // this.parts = parts; // mutable object
 this.parts = Arrays.copyOf(parts, parts.length);
 ```
+
+### toString method
+
+- include in a class.
+- returns what you want when you print an object.
+
+
