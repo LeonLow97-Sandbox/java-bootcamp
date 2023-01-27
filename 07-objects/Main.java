@@ -14,7 +14,6 @@ public class Main {
         };
         
         Dealership dealership = new Dealership(cars);
-        
 
         System.out.println("\n ****** JAVA DEALERSHIP! ****** \n");        
         System.out.println("Feel free to browse through our collection of cars.\n");
