@@ -60,3 +60,7 @@ public static void printPoly(Parent parent) {
   - usually for providing inheritance to the child classes, when you don't want to create objects out of a parent class.
 - `abstract method`: exposes behavior that a child must override.
   - `public abstract void wear();`
+
+## `Object` class
+
+- Root Parent of classes in Java: `Object` class.

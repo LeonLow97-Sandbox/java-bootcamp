@@ -18,6 +18,8 @@ public class Main {
 
         shirt.wear();
         pants.wear();
+
+        System.out.println(shirt.toString());
     }
 
     // Polymorphism
