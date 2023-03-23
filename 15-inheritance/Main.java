@@ -9,13 +9,18 @@ public class Main {
 
         Shirt shirt = new Shirt(10.99, "Red", "Nike", Size.SMALL);
         shirt.fold();
-        productStore(shirt);
 
         Pants pants = new Pants(49.99, "Black", "Levi's", 32, 32);
         pants.fold();
+
+        productStore(shirt);
         productStore(pants);
+
+        shirt.wear();
+        pants.wear();
     }
 
+    // Polymorphism
     public static void productStore(Product product) {
         System.out.println("Thank you for purchasing the " + product.getBrand() + " "
                 + product.getClass().getSimpleName().toLowerCase() + ". Your total comes to $"

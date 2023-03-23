@@ -27,4 +27,17 @@ public class Pants extends Product {
         this.length = length;
     }
 
+    @Override
+    public void fold() {
+        super.fold();
+        System.out.println("Hold pants upright");
+        System.out.println("Fold one leg over the other");
+        System.out.println("Fold pants from bottom in thirds");
+    }
+
+    @Override
+    public void wear() {
+        System.out.println("The " + this.waist + " " + length + " pants look great on you!");
+    }
+
 }
