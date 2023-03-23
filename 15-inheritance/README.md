@@ -37,4 +37,6 @@ public static void printPoly(Parent parent) {
 
 # Constructor
 
-
+- Passing `super` class parent constructor inside the constructor of the child class.
+- `super()` calls the parent constructor to update inherited fields.
+- The child constructor updates the remaining fields.
