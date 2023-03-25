@@ -6,6 +6,7 @@ import pojo.Account;
 import pojo.Checking;
 import pojo.Credit;
 import repository.AccountRepository;
+import service.AccountService;
 import service.CheckingService;
 import service.CreditService;
 
@@ -39,7 +40,10 @@ public class Main {
         repository.deleteAccount("G4567H");
     }
 
-    public static void 
+    // using polymorphism for the 2 accounts - Checking and Credit that share this interface
+    public static void executeTransaction(AccountService accountService) {
+        // business logic
+    }
 
 
 }
